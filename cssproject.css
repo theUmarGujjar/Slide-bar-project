@@ -1,0 +1,286 @@
+
+/* 12 JULY 2024 
+
+ DEVELOPER:
+ ------------UMAR GUJJAR
+ ------------Founder & CEO Gujjar Soloutions
+ ------------umar4128015@gmail.com
+ ------------03182465854
+ ------------CSS PROJECT
+ ------------Photography website
+
+ ---important specification is the sliding sidebar menu whose two labels which use to slide
+ ---that side bar--------------------------------------------------------------------------
+
+ ---final stylesheet file with exact approach 
+
+
+*/
+
+
+
+/* that is the default type of styling that set to the whole webpage */
+*{
+
+    /*padding and margin of whole webpage set to zero 
+    ---for good styling and easy understanding */
+    padding: 0px;
+    margin: 0px;
+
+    /* font family popins set to the whole webpage */
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+/* 1st :  class main box contain every element of the webpage */
+.main_box{
+
+    /* background image set to the main box */
+    background-image: url("photoproject.jpg");
+
+    /* give the height and width to main box of whole screen of gadget by using vh */
+    height: 100vh;
+    /* here vh means veiwport height which is 100% */
+
+    width: 100%;
+
+    /* give the value cover to background-size which is used to make the background photo fit on the whole screen 
+    ----so , background size may have three values 
+    -----------------cover  : it completely cover the background
+    -----------------contain
+    -----------------auto
+    here we use the vale cover */
+    background-size:cover;
+
+}
+
+/* 2nd  :  btn_one is the class of first button which is responsible of sliding the bar outward */
+.btn_one i{
+    
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+
+    /* give position absolute to that button and that button have no parent element whose position is 
+    - set so its position is with respect to whole webpage */
+    position: absolute;
+    top: 1px;
+    left: 4px;
+
+
+    line-height:60px;
+
+    /* set cursor to pointer so that when arrow points it arrows shape change */
+    cursor: pointer;
+
+
+    /* here we comment out the z-index bcz we want to limit its function and it can only work when 
+    - slide is inside the screen 
+    z-index: 1;
+    */
+
+}
+
+/* 3rd  :  it encloses almost all elements except button one */
+.sidebar_menu{
+
+    /*height set to the whole webpage */
+    height: 100vh;
+
+    /* width set to 300px */
+    width: 250px;
+
+    /* position set to fixed */
+    position: fixed;
+
+    /*it is use to hid it behind the screen */
+    left: -300px;
+    
+    /* set position from left to -300px 
+    -- so that it hid from the original webpage 
+    left: -300px;
+    */
+
+    /* set background color to a light shade of white */
+    background-color: rgba(250, 250, 250, 0.144);
+
+    /* set box shadow to a madiocre shade of white */
+    box-shadow: 0px 0px 6px rgba(250, 250, 250, 0.514);
+
+}
+
+
+/* 4th  :   class logo inside slide_bar contain name umar gujar */
+.sidebar_menu  .logo {
+
+
+    /* set positon absolute to the logo or name */
+    position: absolute;
+
+
+    /* set width to the whole width of sidebar which is its parent element */
+    width: 100%;
+
+    line-height:60px ;
+
+    /* also set a box shadow to that logo which diversion is less than to the box shadow of parent div (sidebar menu) */
+    box-shadow:  0px 0px 8px rgba(250, 250, 250, 0.514);
+
+}
+
+
+/*   5th  :  only that anchor tag inside class logo which is inside class sidebar_menu contain name of logo */
+.sidebar_menu .logo a{
+    
+    /* set position to absolute so that you can push it from left or top */
+    position: absolute;
+    left: 42px;
+
+    /* set color to white */
+    color:white;
+
+    /* remove underline from the name of logo */
+    text-decoration:none;
+
+    /* set font size and font weight */
+    font-size:20px;
+    font-weight: 500;
+}
+
+/* 6th  :  class menu inside class sidebar-menu  contain all icons of navbar */
+.sidebar_menu .menu {
+    /* set color to white */
+    color: white;
+
+    /* set position to absolute */
+    position: absolute;
+    top: 80px;
+}
+
+/* 7th  :  button two inside sidebar menu used to remove the sidebar from screen */
+.sidebar_menu .btn_two i{
+    /*set colot to gray */
+    color: gray;
+
+    /* set position to absolute which is with respect to parent element whose position is fix */
+    position: absolute;
+    left: 225px;
+    top: 20px;
+
+    /* set font size to 25px */
+    font-size: 25px;
+
+    /* set cursor to pointer so that when arrow points it arrows shape change */
+    cursor:pointer;
+
+}
+
+/* 8th element is the list inside the class menu which is inside the class sidebar-menu */
+.sidebar_menu .menu li{
+    /* set top margin which is 6px .
+    -- I learnt that concept when align a single element in center means we requires spacing from sides and top or bottom
+    -- we can use padding or top margins while firstly i was making a div and give it a height and width and set its display flex 
+    -- and the align the li in center with spaces from all the four sides by using flex properties which becomes very complex */
+    top-margin: 6px;
+
+    /* from left to right 15px while from top and botton 20px */
+    padding: 15px 20px;
+
+    width: 210px;
+
+}
+
+/* 9th element is anchor tags and icons inside the class menu and which is inside the class sidebar_menu */
+.sidebar_menu  .menu i,a{
+
+    /* set color to white */
+    color: white;
+
+    /*remove underline by using none value of property text-decoration  */
+    text-decoration : none;
+
+    /* set font size to 30px */
+    font-size : 20px;
+}
+
+/* 10 th element is the icons of sidebar menu */
+.sidebar_menu .menu i{
+    
+    /* set right padding to make a space between text and icon */
+    padding-right :7px;
+}
+
+
+/* 11th element is the social media bar */
+.sidebar_menu .social_media{
+    /* set position to absolute : absolute is always set from the parent element while fixed set from the total screen of web-page */
+    position: absolute;
+    bottom:50px;
+    left: 25%;
+}
+
+/* 12 th element is the icons of social media bar */
+.sidebar_menu .social_media i{
+    color: white;
+
+    /* set opacity to half to give it grayish tone */
+    opacity: 0.5;
+    
+    padding-right: 9px;
+}
+
+/* 13 th element is check box whose id is #check */
+#check{
+
+    /* set its display to none to remove its from the original web page */
+    display: none;
+}
+
+
+
+
+/*------------------------------------------------- SET HOVER PROPERTIES ----------------------------------------------------------------------------*/
+
+.btn_one i:hover{
+    font-size: 40px;
+}
+
+.btn_two i:hover{
+    font-size: 30px;
+}
+
+.sidebar_menu .social_media i:hover{
+
+    /* firstly we set the opacity 0.5 */
+    opacity: 1;
+
+    /* for slight increase in its size */
+    transform: scale(1.2);
+
+
+}
+
+.sidebar_menu .menu li:hover{
+    
+    /* make its box shadow */
+    box-shadow: 1px 1px 4px rgba(255,255,255,0.5)
+}
+
+
+
+
+
+
+
+/*------------------------------- CONTROL SLIDING BY BUTTONS WITHOUT USING JAVASCRIPT --------------------------------------------------------------
+
+-      For that we will use sibbling combinator by using symbol (~) 
+-      when checkbox is active then we can slide sidebar by using its sibling combinator 
+*/
+
+#check:checked ~ .sidebar_menu{
+    position:absolute;
+    left: 0px;
+}
+
